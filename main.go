@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"grokking-algorithms/chapter1"
+	"grokking-algorithms/chapter4"
 )
 
 func main() {
-	arr := []int{1,2,3,4,5,6,7}
-	fmt.Println(chapter1.BinarySearch(arr,8))
+	arr := []int{4,1,3,2}
+	fmt.Println(chapter4.QuickSort(arr))
 }
