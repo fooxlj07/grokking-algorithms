@@ -1,11 +1,10 @@
 package main
 
 import (
-	"fmt"
-	"grokking-algorithms/chapter4"
+	chapter3 "grokking-algorithms/chapter3/go"
 )
 
 func main() {
-	arr := []int{4,1,3,2}
-	fmt.Println(chapter4.QuickSort(arr))
+	box := chapter3.BuildBox()
+	chapter3.FindKey(box)
 }
