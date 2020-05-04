@@ -1,56 +1,42 @@
 package chapter4
 
-func Sum(arr []int) int{
+import "fmt"
+
+// divide the area into squares which have the same area (as big as possible)
+// 1. baseline condition:  one side is another side's multiple
+func divideTheGround(width int, height int) int {
+	fmt.Println(width, height)
+	if height == width {
+		return height
+	}
+	if height <= 0 || width <= 0 {
+		return 0
+	}
+	// make height always bigger than width
+	if height < width {
+		width, height = height, width
+	}
+	if height%width == 0 {
+		return width
+	}
+
+	return divideTheGround(height%width, width)
+}
+
+func sum(arr []int) int {
+	fmt.Println(arr)
 	if len(arr) == 0 {
 		return 0
 	}
-	if len(arr) ==1{
+
+	if len(arr) == 1 {
 		return arr[0]
 	}
-	return arr[0] + Sum(arr[1:])
+
+	return sum(arr[1:]) + arr[0]
 }
 
-func Max(arr []int) int{
-	if len(arr) == 0{
-		return 0
-	}
-	if len(arr) == 1{
-		return arr[0]
-	}
-	if arr[0] > Max(arr[1:]){
-		return arr[0]
-	}
-	return Max(arr[1:])
-}
-
-func BinarySearch(arr []int, element, start, end int) int{
-	if start >= end {
-		return -1
-	}
-	mid := end + start / 2
-	if arr[mid] == element{
-		return mid
-	}
-	if element > arr[mid] {
-		return BinarySearch(arr, element, mid+1, end)
-	}
-	return BinarySearch(arr, element , start, mid-1)
-}
-
-func QuickSort(arr []int) []int{
-	if len(arr) < 2 {
-		return arr
-	}
-
-	pivot := arr[0]
-	left, right := []int{}, []int{}
-	for _, a := range arr[1:] {
-		if a <= pivot {
-			left = append(left, a)
-		}else{
-			right = append(right, a)
-		}
-	}
-	result := append(QuickSort(left), pivot)
-	return append(result, QuickSort(right)...)
+func Run() {
+	fmt.Println(divideTheGround(24, 640))
+	fmt.Println(sum([]int{2, 4, 6}))
 }

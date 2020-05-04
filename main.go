@@ -1,10 +1,9 @@
 package main
 
 import (
-	chapter3 "grokking-algorithms/chapter3/go"
+	chapter4 "grokking-algorithms/chapter4"
 )
 
 func main() {
-	box := chapter3.BuildBox()
-	chapter3.FindKey(box)
+	chapter4.Run()
 }
