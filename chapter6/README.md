@@ -1,7 +1,7 @@
 ### Graph
 
 Graph1 for problem if can find a person in facebook network
-![alt text](https://github.com/fooxlj07/grokking-algorithms/master/pictures/graph1.png?raw=true)
+![alt text](https://github.com/fooxlj07/grokking-algorithms/blob/master/pictures/graph1.png?raw=true)
 
 There is two ways to store the graph, as the picture showed.
 
