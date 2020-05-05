@@ -1,9 +1,9 @@
 package main
 
 import (
-	chapter4 "grokking-algorithms/chapter4"
+	chapter6 "grokking-algorithms/chapter6"
 )
 
 func main() {
-	chapter4.Run()
+	chapter6.Run()
 }
