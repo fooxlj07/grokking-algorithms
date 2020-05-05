@@ -1,4 +1,10 @@
-### Graph
+### Graph Breadth First Search  (BFS)
+
+- Go through the graph
+- Check if a value exists in the graph
+- Find the shortest way (Doesn't work for the weighted graph)
+
+Time comsuming: O(V + E) (V: number of vertice, E: number of edge)
 
 Graph1 for problem if can find a person in facebook network
 ![alt text](https://github.com/fooxlj07/grokking-algorithms/blob/master/pictures/graph1.png?raw=true)
