@@ -22,9 +22,71 @@ func Min(arr []int) (int, int) {
 	return index, min
 }
 
-func DeleteByIndex(arr []int, index int) []int {
-	if index >= len(arr) || len(arr) <= 1 {
+func DeleteFromIntByIndex(arr []int, index int) []int {
+	if index >= len(arr) {
 		return arr
 	}
+	if index == 0 {
+		return arr[1:]
+	}
+	if index == len(arr)-1 {
+		return arr[:index]
+	}
 	return append(arr[:index], arr[index+1:]...)
+}
+
+func DeleteFromStrByIndex(arr []string, index int) []string {
+	if index >= len(arr) {
+		return arr
+	}
+	if index == 0 {
+		return arr[1:]
+	}
+	if index == len(arr)-1 {
+		return arr[:index]
+	}
+	return append(arr[:index], arr[index+1:]...)
+}
+
+func UnionStrSlice(arr1 []string, arr2 []string) []string {
+	m := map[string]bool{}
+	union := []string{}
+	for _, a := range arr1 {
+		m[a] = true
+	}
+	for _, b := range arr2 {
+		if _, ok := m[b]; !ok {
+			union = append(union, b)
+		}
+	}
+
+	return append(arr1, union...)
+}
+
+func IntersectionStrSlice(arr1 []string, arr2 []string) []string {
+	m := map[string]bool{}
+	intersection := []string{}
+	for _, a := range arr1 {
+		m[a] = true
+	}
+	for _, b := range arr2 {
+		if _, ok := m[b]; ok {
+			intersection = append(intersection, b)
+		}
+	}
+	return intersection
+}
+
+func RemoveStrSlice1FromSlice2(arr1 []string, arr2 []string) []string {
+	m := map[string]bool{}
+	arr := []string{}
+	for _, a := range arr2 {
+		m[a] = true
+	}
+	for _, b := range arr1 {
+		if !m[b] {
+			arr = append(arr, b)
+		}
+	}
+	return arr
 }

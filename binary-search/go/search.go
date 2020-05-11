@@ -1,4 +1,4 @@
-package chapter1
+package binaryseach
 
 func BinarySearch(arr []int, element int) int {
 	var mid int

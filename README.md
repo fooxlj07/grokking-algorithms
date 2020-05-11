@@ -19,4 +19,5 @@ Chapter
 4. divide-conquer
 5. hashmap
 6. bfs (Graph Breadth First Search)
-7. Dijkstra (calculate the shortest path in graph)
+7. dijkstra (calculate the shortest path in graph)
+8. greedy 

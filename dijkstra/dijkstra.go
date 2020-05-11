@@ -1,4 +1,4 @@
-package chapter7
+package dijkstra
 
 import "fmt"
 

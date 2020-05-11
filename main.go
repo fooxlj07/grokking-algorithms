@@ -1,9 +1,9 @@
 package main
 
 import (
-	dijkstra "grokking-algorithms/dijkstra"
+	greedy "grokking-algorithms/greedy"
 )
 
 func main() {
-	dijkstra.Run()
+	greedy.Run()
 }

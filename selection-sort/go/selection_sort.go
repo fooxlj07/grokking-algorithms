@@ -1,4 +1,4 @@
-package chapter2
+package selectionsort
 
 import (
 	helper "grokking-algorithms/go-helper"
