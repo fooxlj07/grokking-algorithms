@@ -1,9 +1,9 @@
 package main
 
 import (
-	chapter7 "grokking-algorithms/chapter7"
+	dijkstra "grokking-algorithms/dijkstra"
 )
 
 func main() {
-	chapter7.Run()
+	dijkstra.Run()
 }
