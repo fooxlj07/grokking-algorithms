@@ -46,6 +46,7 @@ func generateClassSchedule() ([]string, [][2]float32) {
 
 /*
 	Find a minumum set of giving radio set to cover all the states listed
+	This is NP problem, use the approximation algorithm -> greedy algo/
 */
 func findMinumumRadioSet(radioSet map[string][]string, states []string) []string {
 	finalRadioSet := []string{}
