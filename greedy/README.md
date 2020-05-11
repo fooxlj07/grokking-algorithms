@@ -4,8 +4,9 @@ Making the locally optimal choice at each stage with the intent of finding a glo
 
 Attention:
 ```
-For Np Problem, we don't have the algo to get the best solution yet, we can only use approximation algorithm,
-actually it is greedy algorithm to find a approximated best solution.
+For Np Problem, we don't have the algo to get the best solution yet, we can only use approximation algorithm 
+to find a solution close to the best
+Greedy algorithm is a good solution as approximated algorithm.
 ```
 
 Typical NP Problems: 
